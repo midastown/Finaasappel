@@ -1,0 +1,286 @@
+{
+  "result": [
+    {
+      "name": "Income Statement",
+      "securityID": "AAPL:US",
+      "timeBasedSheets": [
+        {
+          "name": "Quarterly",
+          "columnHeadings": [
+            "6/2020",
+            "9/2020",
+            "12/2020",
+            "3/2021"
+          ],
+          "chartData": [
+            {
+              "name": "Revenue",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                59685000000,
+                64698000000,
+                111439000000,
+                89584000000
+              ]
+            },
+            {
+              "name": "Net Income",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                11253000000,
+                12673000000,
+                28755000000,
+                23630000000
+              ]
+            },
+            {
+              "name": "Profit Margin",
+              "chartType": "line",
+              "isPercentage": true,
+              "values": [
+                18.854,
+                19.5879,
+                25.8034,
+                26.3775
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Annual",
+          "columnHeadings": [
+            "2017",
+            "2018",
+            "2019",
+            "2020"
+          ],
+          "chartData": [
+            {
+              "name": "Revenue",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                229234000000,
+                265595000000,
+                260174000000,
+                274515000000
+              ]
+            },
+            {
+              "name": "Net Income",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                48351000000,
+                59531000000,
+                55256000000,
+                57411000000
+              ]
+            },
+            {
+              "name": "Profit Margin",
+              "chartType": "line",
+              "isPercentage": true,
+              "values": [
+                21.0924,
+                22.4142,
+                21.2381,
+                20.9136
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Balance Sheet",
+      "securityID": "AAPL:US",
+      "timeBasedSheets": [
+        {
+          "name": "Quarterly",
+          "columnHeadings": [
+            "6/2020",
+            "9/2020",
+            "12/2020",
+            "3/2021"
+          ],
+          "chartData": [
+            {
+              "name": "Total Assets",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                317344000000,
+                323888000000,
+                354054000000,
+                337158000000
+              ]
+            },
+            {
+              "name": "Total Liabilities",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                245062000000,
+                258549000000,
+                287830000000,
+                267980000000
+              ]
+            },
+            {
+              "name": "Debt to Assets",
+              "chartType": "line",
+              "isPercentage": true,
+              "values": [
+                38.5027,
+                37.7532,
+                31.6457,
+                36.0795
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Annual",
+          "columnHeadings": [
+            "2017",
+            "2018",
+            "2019",
+            "2020"
+          ],
+          "chartData": [
+            {
+              "name": "Total Assets",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                375319000000,
+                365725000000,
+                338516000000,
+                323888000000
+              ]
+            },
+            {
+              "name": "Total Liabilities",
+              "chartType": "bar",
+              "isPercentage": false,
+              "values": [
+                241272000000,
+                258578000000,
+                248028000000,
+                258549000000
+              ]
+            },
+            {
+              "name": "Debt to Assets",
+              "chartType": "line",
+              "isPercentage": true,
+              "values": [
+                30.8218,
+                31.303,
+                31.9178,
+                37.7532
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cash Flow",
+      "securityID": "AAPL:US",
+      "timeBasedSheets": [
+        {
+          "name": "Quarterly",
+          "columnHeadings": [
+            "6/2020",
+            "9/2020",
+            "12/2020",
+            "3/2021"
+          ],
+          "chartData": [
+            {
+              "name": "Operating",
+              "chartType": "line",
+              "isPercentage": false,
+              "values": [
+                16271000000,
+                20576000000,
+                38763000000,
+                23981000000
+              ]
+            },
+            {
+              "name": "Investing",
+              "chartType": "line",
+              "isPercentage": false,
+              "values": [
+                -5165000000,
+                5531000000,
+                -8584000000,
+                -10368000000
+              ]
+            },
+            {
+              "name": "Financing",
+              "chartType": "line",
+              "isPercentage": false,
+              "values": [
+                -19116000000,
+                -21357000000,
+                -32249000000,
+                -11326000000
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Annual",
+          "columnHeadings": [
+            "2017",
+            "2018",
+            "2019",
+            "2020"
+          ],
+          "chartData": [
+            {
+              "name": "Operating",
+              "chartType": "line",
+              "isPercentage": false,
+              "values": [
+                64225000000,
+                77434000000,
+                69391000000,
+                80674000000
+              ]
+            },
+            {
+              "name": "Investing",
+              "chartType": "line",
+              "isPercentage": false,
+              "values": [
+                -46446000000,
+                16066000000,
+                45896000000,
+                -4289000000
+              ]
+            },
+            {
+              "name": "Financing",
+              "chartType": "line",
+              "isPercentage": false,
+              "values": [
+                -17974000000,
+                -87876000000,
+                -90976000000,
+                -86820000000
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

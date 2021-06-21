@@ -11,6 +11,6 @@ Financial App that has, for now, three use cases:
 - maven
 - [google's GSON](github.com/google/gson)
 - [FMP's API](https://financialmodelingprep.com/developer/docs/)
-- JavaFX
+- snakeyaml 
 
 

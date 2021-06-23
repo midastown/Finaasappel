@@ -11,57 +11,37 @@ import model.CashFlow;
 import model.Income;
 import model.Profile;
 import utils.ApiCall;
+import utils.CasesCTLR;
 import utils.Parser;
 
-
-import java.io.*;
+import java.util.Scanner;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
-        String response;
-        ApiCall caller =  new ApiCall();
-        Parser parse = new Parser();
+        // user inserts stock
+        Scanner scan = new Scanner(System.in);
+        System.out.println("What stock are you interested in right now ?");
+        String stock = scan.nextLine();
 
+        // user then chooses which of the THREE use cases he wants
+        System.out.println("We have three use cases (choose one): \n" +
+                "(1) Basic Information \n" +
+                "(2) Most Essencials \n" +
+                "(3) Financial Statements");
+        int choice = scan.nextInt();
 
+        // program makes the necessary api calls and shows the user what he wants.
+        CasesCTLR controller = new CasesCTLR();
 
-        response = caller.call("AAPL", "income", true);
-        if (response.equals("[ ]") || response.equals("null")) {
-            System.out.println("we got an empty response");
-        } else {
-            System.out.println("we got a good response");
-        }
-        Income[] income = parse.jsonToIncome(response);
+        controller.serve(stock, choice);
 
-        response = caller.call("AAPL", "profile", false);
-        if (response.equals("[ ]") || response.equals("null")) {
-            System.out.println("we got an empty response");
-        } else {
-            System.out.println("we got a good response");
-        }
-        Profile[] profile = parse.jsonToProfile(response);
+        Profile[] profile = controller.getProfile();
 
-        response = caller.call("AAPL","cash-flow", true);
-        if (response.equals("[ ]") || response.equals("null")) {
-            System.out.println("we got an empty response");
-        } else {
-            System.out.println("we got a good response");
-        }
-        CashFlow[] cashFlow = parse.jsonToCashFlow(response);
-
-        response = caller.call("AAPL","balance-sheet", true);
-        if (response.equals("[ ]") || response.equals("null")) {
-            System.out.println("we got an empty response");
-        } else {
-            System.out.println("we got a good response");
-        }
-        BalanceSheet[] balanceSheet = parse.jsonToBalanceSheet(response);
+        System.out.println(profile[0].getSymbol());
 
 
 
-        // show example
-        String symbyol = income[0].getSymbol();
-        System.out.println(symbyol);
     }
 }

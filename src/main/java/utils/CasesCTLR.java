@@ -10,15 +10,17 @@ public class CasesCTLR {
     private String response;
     private Parser parse;
     private ApiCall apiCaller;
+    private Formater formater;
     private Income[] income;
     private Profile[] profile;
     private CashFlow[] cashFlow;
     private BalanceSheet[] balanceSheet;
-    private boolean[] limits = {false, true, true, true};
-    private String[] components = {"profile", "income", "cash-flow", "balance-sheet"};
+    private final boolean[] limits = {false, true, true, true};
+    private final String[] components = {"profile", "income", "cash-flow", "balance-sheet"};
 
     public CasesCTLR() {
         this.apiCaller = new ApiCall();
+        this.formater = new Formater();
         this.parse = new Parser();
     }
 
@@ -29,6 +31,14 @@ public class CasesCTLR {
             if (statusGreen()){
                 jsonToObject(components[i]);
             }
+        }
+
+        if (choice == 1) {
+            formater.serveBasics(profile);
+        } else if (choice == 2) {
+            formater.serveEssentials(profile, income);
+        } else {
+            formater.serveStatements(income, cashFlow, balanceSheet);
         }
 
     }
@@ -64,28 +74,14 @@ public class CasesCTLR {
     }
 
     private boolean statusGreen(){
+        // todo: need to add an alert that user did not type the symbol right
         if (response.equals("[ ]") || response.equals("null")) {
-            System.out.println("we got an empty response");
+//            System.out.println("we got an empty response");
             return false;
         } else {
-            System.out.println("we got a good response");
+//            System.out.println("we got a good response");
             return true;
         }
     }
 
-    public Income[] getIncome() {
-        return income;
-    }
-
-    public Profile[] getProfile() {
-        return profile;
-    }
-
-    public CashFlow[] getCashFlow() {
-        return cashFlow;
-    }
-
-    public BalanceSheet[] getBalanceSheet() {
-        return balanceSheet;
-    }
 }

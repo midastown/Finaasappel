@@ -31,15 +31,12 @@ public class Main {
                 "(2) Most Essencials \n" +
                 "(3) Financial Statements");
         int choice = scan.nextInt();
+        // todo: need to check for values entered not in line with choice given
 
         // program makes the necessary api calls and shows the user what he wants.
         CasesCTLR controller = new CasesCTLR();
 
         controller.serve(stock, choice);
-
-        Profile[] profile = controller.getProfile();
-
-        System.out.println(profile[0].getSymbol());
 
 
 

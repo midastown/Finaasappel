@@ -6,14 +6,8 @@
 
 package control;
 
-import model.BalanceSheet;
-import model.CashFlow;
-import model.Income;
-import model.Profile;
-import utils.ApiCall;
-import utils.CasesCTLR;
-import utils.Parser;
 
+import utils.CasesCTLR;
 import java.util.Scanner;
 
 
@@ -31,7 +25,8 @@ public class Main {
                 "(2) Most Essencials \n" +
                 "(3) Financial Statements");
         int choice = scan.nextInt();
-        // todo: need to check for values entered not in line with choice given
+        // (1) todo: need to check for values entered not in line with choice given
+        // (2) todo: export results in file
 
         // program makes the necessary api calls and shows the user what he wants.
         CasesCTLR controller = new CasesCTLR();

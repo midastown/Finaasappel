@@ -76,10 +76,10 @@ public class CasesCTLR {
     private boolean statusGreen(){
         // todo: need to add an alert that user did not type the symbol right
         if (response.equals("[ ]") || response.equals("null")) {
-//            System.out.println("we got an empty response");
+//            System.out.println("we got a 404 response");
             return false;
         } else {
-//            System.out.println("we got a good response");
+//            System.out.println("we got a 200 response");
             return true;
         }
     }

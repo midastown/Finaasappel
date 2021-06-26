@@ -11,6 +11,8 @@ public class ApiCall {
 
     private String apikey;
 
+
+    // Constructor
     public ApiCall()  {
         // Reading api key from YAML config file
         Yaml yaml = new Yaml();
@@ -23,28 +25,24 @@ public class ApiCall {
         }
         Map<String, Object> data = yaml.load(yamlStream);
         this.apikey = (String) data.get("key");
-
     }
 
     public String call(String stock, String component , boolean isLimit) {
 
+        // seting up string variables for GET request
         String limit = isLimit ? "limit=120&" : "";
-
         if (!component.equals("profile")) {
             component += "-statement";
         }
 
+        // actual GET request
         String urali = "https://financialmodelingprep.com/api/v3/" + component + "/" + stock + "?" + limit + "apikey=" + apikey;
-
-
-
         URL url = null;
         try {
             url = new URL(urali);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-
         StringBuffer response = new StringBuffer();
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"))) {
             for (String line; (line = reader.readLine()) != null;) {

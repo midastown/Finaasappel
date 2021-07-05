@@ -46,16 +46,16 @@ public class CasesCTLR {
     private void jsonToObject(String component){
         switch (component) {
             case "profile":
-                profile = parse.jsonToProfile(response);
+                profile = parse.jsonToObject(response, Profile[].class);
                 break;
             case "income":
-                income = parse.jsonToIncome(response);
+                income = parse.jsonToObject(response, Income[].class);
                 break;
             case "cash-flow":
-                cashFlow = parse.jsonToCashFlow(response);
+                cashFlow = parse.jsonToObject(response, CashFlow[].class);
                 break;
             case "balance-sheet":
-                balanceSheet = parse.jsonToBalanceSheet(response);
+                balanceSheet = parse.jsonToObject(response, BalanceSheet[].class);
                 break;
         }
     }
@@ -74,12 +74,9 @@ public class CasesCTLR {
     }
 
     private boolean statusGreen(){
-        // todo: need to add an alert that user did not type the symbol right
         if (response.equals("[ ]") || response.equals("null")) {
-//            System.out.println("we got a 404 response");
             return false;
         } else {
-//            System.out.println("we got a 200 response");
             return true;
         }
     }

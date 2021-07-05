@@ -15,6 +15,8 @@ public class Formater {
 
     public void serveBasics(Profile[] profile) {
 
+
+
         Object[][] table = new String[3][];
         System.out.printf("BASIC INFORMATION: %s\n", profile[0].getSymbol());
         table[0] = new String[] {"Stock Price:", String.format("%f", profile[0].getPrice())};

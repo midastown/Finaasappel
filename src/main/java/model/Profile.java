@@ -49,7 +49,6 @@ public class Profile {
     }
 
     public double getPrice() {
-        // todo: need to format this number to 2 decimals
         return price;
     }
 
@@ -74,7 +73,6 @@ public class Profile {
     }
 
     public double getMktCap() {
-        // todo: need to format this number to 0 decimals
         return mktCap;
     }
 

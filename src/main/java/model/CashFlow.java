@@ -2,7 +2,7 @@ package model;
 
 
 
-public class CashFlow{
+public class CashFlow {
 
     private String date;
     private String symbol;
@@ -44,7 +44,6 @@ public class CashFlow{
     private String finalLink;
 
     public CashFlow() {
-
     }
 
     public String getDate() {
